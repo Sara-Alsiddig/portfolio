@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
+  "env": {
+    "PORT": "3000",
+    "BASE_PATH": "/"
+  }
+}
