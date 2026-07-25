@@ -1,6 +1,6 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import bgImage from "@/assets/hero-bg.png";
-import profileImage from "@assets/IMG_6405_1781178862752.JPG";
+import profileImage from "@assets/IMG_6405.JPG";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
