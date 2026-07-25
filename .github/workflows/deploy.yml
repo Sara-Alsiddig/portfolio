@@ -26,8 +26,13 @@ jobs:
         env:
           VITE_PUBLIC_BASE: /portfolio/
       
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public
+      - name: Deploy
+        run: |
+          rm -rf docs
+          mv dist/public docs
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs
+          git commit -m "Deploy: $(date)" || true
+          git push
+
