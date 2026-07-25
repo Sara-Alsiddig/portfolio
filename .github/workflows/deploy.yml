@@ -22,10 +22,9 @@ jobs:
         run: npm install --legacy-peer-deps
       
       - name: Build
-        env:
-          PORT: 3000
-          BASE_PATH: /portfolio/
         run: npm run build
+        env:
+          VITE_PUBLIC_BASE: /portfolio/
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
